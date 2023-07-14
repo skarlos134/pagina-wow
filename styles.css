@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700&display=swap");
+:root {
+  --color-gray: #585858;
+  --color-light-gray: #949494;
+  --color-green: #32b661;
+
+  --font-size-large: 24px;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+body {
+  /* background-color: bisque; */
+  margin: 0 auto;
+}
+.header {
+  height: 35px;
+  min-width: 320px;
+  background-color: rgb(255, 240, 105);
+  text-align-last: center;
+  color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(252, 252, 252);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+
+nav button {
+  border: none;
+  background: none;
+}
+.toggle-menu {
+  position: absolute;
+  background-color: white;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 20;
+  border-radius: 8px;
+}
+.toggle-menu button {
+  border: none;
+  background: none;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+.toggle-menu ul li {
+  list-style: none;
+  text-decoration: none;
+  height: 50px;
+  margin-left: 16px;
+}
+.toggle-menu ul li a {
+  text-decoration: none;
+  color: var(--color-gray);
+}
+.toggle-menu {
+  /* ... */
+  transform: translateX(250px);
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-menu.show-menu {
+  transform: translateX(0);
+}
+
+nav img {
+  height: 40px;
+}
+
+nav .close {
+  display: none;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+.swiper .swiper-slide img {
+  width: 100%;
+}
+
+.carrusel {
+  min-width: 320px;
+  max-width: 800px;
+  height: 200px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+.carrusel img {
+  object-fit: cover;
+}
+.container {
+  padding-top: 16px;
+  min-width: 320px;
+  max-width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.beneficios {
+  min-width: 320px;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.beneficio :hover {
+  scale: 102%;
+}
+
+.beneficio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  max-width: 80px;
+  flex-direction: column;
+}
+
+.beneficio img {
+  width: 60px;
+  border-radius: 50%;
+}
+.beneficio span {
+  color: gray;
+  font-family: roboto;
+  font-size: 14px;
+  text-align: center;
+}
+.section-title {
+  font-size: 24px;
+  /* margin-top: 16px; */
+  margin-bottom: 16px;
+  text-align-last: center;
+  font-weight: 500;
+  color: var(--color-gray);
+}
+.productos {
+  margin-top: 16px;
+  width: 90%;
+  background-color: rgb(252, 252, 252);
+  border-radius: 8px;
+  padding: 16px;
+  color: rgb(18, 18, 18);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.15);
+}
+.producto-card:not(:last-child) {
+  margin-bottom: 16px;
+}
+.producto-card {
+  min-height: 116px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  cursor: pointer;
+  background-color: rgb(246, 246, 246);
+  color: var(--color-gray);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.producto-card img {
+  width: 100px;
+  border-radius: 10%;
+  margin-right: 8px;
+}
+.producto-card .producto-nombre {
+  font-size: 16px;
+  font-weight: 600;
+}
+.producto-card .producto-descripcion {
+  font-size: 14px;
+  font-weight: 300;
+  color: var(--color-light-gray);
+}
+.producto-card .option {
+  font-size: 14px;
+  color: var(--color-green);
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+.producto-card .producto-precio {
+  font-size: 16px;
+  font-weight: 600;
+}
+footer {
+  margin-top: 16px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer .redes,
+.medios-de-pago {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: 16px;
+}
+footer .medios-de-pago img {
+  width: 300px;
+}
+footer .redes img {
+  height: 32px;
+}
+
+footer .creditos {
+  margin-top: 16px;
+  text-align: center;
+  color: gray;
+  font-size: 12px;
+}

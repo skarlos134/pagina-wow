@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <header class="header">
+      <span>envios a todo el pais</span><i class="fa-solid fa-truck"></i>
+    </header>
+    <!-- -------------------------nav -->
+    <nav>
+      <img src="./logo_wow.svg" alt="" class="logo" />
+      <button class="menu-button">
+        <img src="./menu.png" alt="" class="menu" />
+      </button>
+      <img src="" alt="" class="close" />
+    </nav>
+    <!-- -------------------------toggle-menu -->
+    <nav class="toggle-menu">
+      <button class="close-button"><img src="./cancelar.png" alt="" /></button>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Productos</a></li>
+        <li><a href="#">Contacto</a></li>
+        <li><a href="#">Preguntas frecuentes</a></li>
+      </ul>
+    </nav>
+    <!-- -------------------------carrusel -->
+    <section class="carrusel">
+      <!-- Slider main container -->
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide"><img src="./carrusel1.png" alt="" /></div>
+          <div class="swiper-slide">
+            <img
+              src="./mujer-joven-moda-aguantando-tarjeta-blanca_1298-536.jpg.avif"
+              alt=""
+            />
+          </div>
+          <div class="swiper-slide">
+            <img src="./DISENOS-VARIOS-MEDIANOS.png" alt="" />
+          </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+      </div>
+    </section>
+    <!-- -------------------------container contenido -->
+    <div class="container">
+      <!-- -------------------------seccion beneficios -->
+      <section class="beneficios">
+        <div class="beneficio">
+          <div class="img_beneficio">
+            <img src="./aprender-en-linea.png" alt="" />
+          </div>
+          <span>Atencion virtual</span>
+        </div>
+        <div class="beneficio">
+          <div class="img_beneficio">
+            <img src="./enviado.png" alt="" />
+          </div>
+          <span>Envios a todo el pais</span>
+        </div>
+        <div class="beneficio">
+          <div class="img_beneficio">
+            <img src="./control-de-calidad.png" alt="" />
+          </div>
+          <span>calidad garantizada</span>
+        </div>
+      </section>
+
+      <div class="productos">
+        <p class="section-title">Productos Destacados</p>
+        <div class="producto-card">
+          <div class="card-img">
+            <img src="./card-img.png" alt="imagen sello" />
+          </div>
+          <div class="card-info">
+            <h1 class="producto-nombre">Sello</h1>
+            <p class="producto-descripcion">
+              base madera tamano 4x4cm, incluye almohadilla de tinta
+            </p>
+            <span class="option">Personalizable</span>
+            <h2 class="producto-precio">$35.000</h2>
+          </div>
+        </div>
+        <div class="producto-card">
+          <div class="card-img">
+            <img src="./card-img.png" alt="imagen sello" />
+          </div>
+          <div class="card-info">
+            <h1 class="producto-nombre">Sticker</h1>
+            <p class="producto-descripcion">
+              300 unidades 4x4cm, resistentes al agua
+            </p>
+            <span class="option">Personalizable</span>
+            <h2 class="producto-precio">$35.000</h2>
+          </div>
+        </div>
+        <div class="producto-card">
+          <div class="card-img">
+            <img src="./card-img.png" alt="imagen sello" />
+          </div>
+          <div class="card-info">
+            <h1 class="producto-nombre">Tarjetas</h1>
+            <p class="producto-descripcion">
+              100 tarjetas 5x8cm, impreison por una cara
+            </p>
+            <span class="option">Personalizable</span>
+            <h2 class="producto-precio">$35.000</h2>
+          </div>
+        </div>
+      </div>
+      <!-- -------------------------footer -->
+      <footer>
+        <div class="medios-de-pago">
+          <img src="./medios-de-pago.png" alt="" />
+        </div>
+        <div class="medios-de-pago">
+          <img src="./transportadoras.png" alt="" />
+        </div>
+        <div class="redes">
+          <img src="./instagram.png" alt="" class="icon" />
+          <img src="./facebook.png" alt="" class="icon" />
+          <img src="./whatsapp (1).png" alt="" class="icon" />
+        </div>
+        <p class="creditos">
+          Todos los derechos reservados <br />
+          Disenado por Carlos Zuluaga - 2023
+        </p>
+      </footer>
+    </div>
+    <!-- -------------------------scripts -->
+    <!-- -------------------------animacion menu -->
+    <script>
+      const menuButton = document.querySelector(".menu");
+      const closeButton = document.querySelector(".close-button");
+      const toggleMenu = document.querySelector(".toggle-menu");
+
+      menuButton.addEventListener("click", () => {
+        toggleMenu.classList.add("show-menu");
+      });
+
+      closeButton.addEventListener("click", () => {
+        toggleMenu.classList.remove("show-menu");
+      });
+    </script>
+    <!-- -------------------------fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/e5e5504eea.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- -------------------------swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        direction: "horizontal",
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        // Navigation arrows
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+          el: ".swiper-scrollbar",
+        },
+      });
+    </script>
+  </body>
+</html>
